@@ -52,7 +52,7 @@ def index():
         toi = coi + poi
         date = datetime.now()
         formatted_date = date.strftime('%Y-%m-%d %H:%M:%S')
-        resulter = databases.create_document('657b88927e9f558c584e', '657b88a19a2856197f58', ID.unique(), {'TickerSymbol':ticker, 'TotalOI':toi, 'CallOI':coi, 'PutOI':poi, 'TotalVolume':tv, 'CallVolume':cv, 'PutVolume':pv, 'Date':formatted_date,'API':False })
+        resulter = databases.create_document('657b88927e9f558c584e', '657b88a19a2856197f58', ID.unique(), {'TickerSymbol':ticker, 'TotalOI':toi, 'CallOI':coi, 'PutOI':poi, 'TotalVolume':tv, 'CallVolume':cv, 'PutVolume':pv, 'Date':formatted_date,'API':True })
         print(resulter)
     return '{"success" : "Updated Successfully", "status" : 200}'
 

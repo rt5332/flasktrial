@@ -10,7 +10,7 @@ from appwrite.query import Query
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/api')
 def index():
     client = Client()
     client.set_endpoint('https://cloud.appwrite.io/v1')
